@@ -1,0 +1,40 @@
+.homePage {
+    color: red;
+    position: absolute;
+    left: 0;
+    top: 3.5rem;
+    width: 100vw;
+    height: 90vh;
+    background-image: url("../../assets/img/GamingPc.jpg");
+    background-repeat: repeat-x;
+    background-size: 525px;
+    background-position: center 10rem;
+    background-attachment: fixed;
+}
+#anim {
+    color: red;
+}
+
+#text-speed-form {
+    height: 35rem;
+}
+
+
+
+
+@media only screen and (max-width: 500px) {
+    #text-speed-form {
+        height: 15rem;
+    }
+    .page {
+        background-size: 250px;
+        color: red;
+    }
+    #anim {
+        color: red;
+    }
+
+    .ExpandNavbar {
+        margin-top: 100px;
+    }
+  }

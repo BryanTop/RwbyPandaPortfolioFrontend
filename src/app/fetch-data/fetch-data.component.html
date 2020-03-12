@@ -1,0 +1,20 @@
+<div class="homePage text-center " [ngClass]="{ExpandNavbar: isExpanded}">
+  <h1 id="tableLabel" class="m-3">Projects</h1>
+  <p *ngIf="!projects"><em>Loading...</em></p>
+
+  <div class="container" *ngIf="projects">
+
+    <div class="row">
+      <div class="col-md-4 project text-center " *ngFor="let project of projects">
+        <div class="card" style="width: 18rem;">
+          <img [src]="project.imgUrl" class="card-img-top" [alt]="project.title">
+          <div class="card-body">
+            <h5 class="card-title">{{project.title}}</h5>
+            <p class="card-text">{{project.description}}</p>
+            <a [href]="project.url" class="btn btn-primary">{{project.title}}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

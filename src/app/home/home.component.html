@@ -1,0 +1,19 @@
+<div class="homePage" [ngClass]="{ExpandNavbar: isExpanded}">
+  <div class="container" >
+    <div class="row">
+        <div class="col">
+            <h1>Hi, My name is Bryan. Im a gamer by heart and i love to <br/> <span [innerHtml]="htmlContent" #anim id="anim" data-wait='3000' data-words='Program! Design! Develop!'></span></h1> 
+        </div>
+      </div>
+      <div class="row justify-content-center" id="text-speed-form" >
+        <div class="col-sm-8 col-md-8 align-self-end">
+          <div class="input-group mb-3" >
+            <div class="input-group-prepend bg-dark text-light"  >
+                <button (click)=SetTimeToWait(time) class="btn btn-outline-secondary" type="button" id="button-addon1">Text Speed in Seconds</button>
+              </div>
+            <input (keyup.enter)=SetTimeToWait(time) [(ngModel)]="timeToWaitInput" #time type="text" class="form-control" >
+          </div>
+        </div>
+      </div>
+  </div> 
+</div>
