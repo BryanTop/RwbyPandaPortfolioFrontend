@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { NavMenuService } from './nav-menu.service';
+import { ProjectService } from './project.service';
 
-describe('NavMenuService', () => {
+describe('ProjectService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: NavMenuService = TestBed.get(NavMenuService);
+    const service: ProjectService = TestBed.get(ProjectService);
     expect(service).toBeTruthy();
   });
 });

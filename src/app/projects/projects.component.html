@@ -1,6 +1,15 @@
 <div class="homePage text-center " [ngClass]="{ExpandNavbar: isExpanded}">
   <h1 id="tableLabel" class="m-3">Projects</h1>
-  <p *ngIf="!projects"><em>Loading...</em></p>
+  <div class="container" style="min-height: 35em;" *ngIf="!projects">
+    <div class="row align-items-center" style="min-height: inherit;">
+      <div class="col align-self-centers">
+        <p><em>
+            <fa-icon [icon]="faAtom" size='4x' [spin]="true"></fa-icon>
+          </em></p>
+      </div>
+    </div>
+  </div>
+
 
   <div class="container" *ngIf="projects">
 
