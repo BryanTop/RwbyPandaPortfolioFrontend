@@ -1,18 +1,25 @@
-import { Component, DoCheck } from '@angular/core';
+import { Component, DoCheck, OnInit } from '@angular/core';
 import { ViewChild } from '@angular/core';
 import { AfterViewInit } from '@angular/core';
 import { animation } from '@angular/animations';
 import { NavMenuService } from '../services/nav-menu.service';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements AfterViewInit, DoCheck{
+export class HomeComponent implements AfterViewInit, DoCheck, OnInit{
+  
   isExpanded = false;
+  title = 'Home: Rwbys Portfolio';
 
-  constructor(private NavMenuService: NavMenuService) {}
+  constructor(private NavMenuService: NavMenuService, private titleService: Title) {}
+
+  ngOnInit(): void {
+    this.titleService.setTitle(this.title);
+  }
 
   ngDoCheck(): void {
     this.isExpanded = this.NavMenuService.ReturnIsExpanded();

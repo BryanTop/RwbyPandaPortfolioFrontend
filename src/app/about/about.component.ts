@@ -1,6 +1,7 @@
 import { Component, OnInit, DoCheck, ViewChild, Renderer2, AfterViewInit } from '@angular/core';
 import { NavMenuService } from '../services/nav-menu.service';
 import { NgControlStatus } from '@angular/forms';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-about',
@@ -10,11 +11,12 @@ import { NgControlStatus } from '@angular/forms';
 export class AboutComponent implements OnInit, DoCheck {
  
   isExpanded = false;
+  title = 'About: Rwbys Portfolio';
 
-  constructor(private NavMenuService: NavMenuService, private renderer: Renderer2) { }
+  constructor(private NavMenuService: NavMenuService, private renderer: Renderer2, private titleService: Title) { }
 
-  ngOnInit() {
-    this.dropObject();
+  ngOnInit(): void {
+    this.titleService.setTitle(this.title);
   }
 
   ngDoCheck(): void {

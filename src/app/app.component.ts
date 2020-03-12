@@ -1,6 +1,11 @@
-import { Component } from '@angular/core';
+
+
+import { Component, OnInit } from '@angular/core';
 import { slider } from './animations';
 import { RouterOutlet } from '@angular/router';
+
+
+
 
 @Component({
   selector: 'app-root',
@@ -11,7 +16,6 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'app';
-
   prepareRoute(outlet: RouterOutlet) {
     return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
   }

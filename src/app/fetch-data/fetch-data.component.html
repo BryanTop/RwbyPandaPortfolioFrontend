@@ -5,8 +5,8 @@
   <div class="container" *ngIf="projects">
 
     <div class="row">
-      <div class="col-md-4 project text-center " *ngFor="let project of projects">
-        <div class="card" style="width: 18rem;">
+      <div class="col-md-4 col-sm-12 project text-center align-self-center mb-2 p-2" *ngFor="let project of projects">
+        <div class="card m-auto" style="width: 18rem;">
           <img [src]="project.imgUrl" class="card-img-top" [alt]="project.title">
           <div class="card-body">
             <h5 class="card-title">{{project.title}}</h5>
