@@ -11,7 +11,7 @@ import { Project } from '../models/project.model';
 export class FetchDataComponent implements DoCheck {
   public projects: Project[];
   isExpanded = false;
-  url = 'http://localhost:3000';
+  url = 'https://rwbys-portfolio-backend.herokuapp.com';
 
   ngDoCheck(): void {
     this.isExpanded = this.navMenuService.ReturnIsExpanded();
